@@ -29,3 +29,7 @@ setKeyHandler ( 'x', HYPER_SHIFT, () => {
   centerWindow ( window );
 
 });
+
+setKeyHandler ( 'm', HYPER_SHIFT, () => {
+  centerMouse();
+});

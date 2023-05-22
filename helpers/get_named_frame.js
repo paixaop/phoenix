@@ -20,6 +20,9 @@ function getNamedFrame ( name ) {
     /* HALVES */
     case 'half-1': return [0/2, 0, 1/2, 1];
     case 'half-2': return [1/2, 0, 1/2, 1];
+    case 'left-half': return [0/2, 0, 1/2, 1];
+    case 'right-half': return [1/2, 0, 1/2, 1];
+
     /* THIRDS */
     case 'third-1': return [0/3, 0, 1/3, 1];
     case 'third-2': return [1/3, 0, 1/3, 1];
@@ -31,6 +34,24 @@ function getNamedFrame ( name ) {
     case 'sixths-4': return [0/3, 1/2, 1/3, 1/2];
     case 'sixths-5': return [1/3, 1/2, 1/3, 1/2];
     case 'sixths-6': return [2/3, 1/2, 1/3, 1/2];
+
+    case 'right-2/3': return [1/3, 0, 2/3, 1];
+    case 'left-2/3': return [0, 0, 2/3, 1];
+
+    /* LG */
+    case 'lg1': return [0, 0, 1/5, 1];
+    case 'lg2': return [1/5, 0, 1/3, 1];
+    case 'lg3': return [1/5+1/3, 0, 1/3, 1];
+    case 'lg4': return [1/5+2/3, 0, 2/15, 1/2];
+    case 'lg5': return [1/5+2/3, 1/2, 2/15, 1/2];
+    case 'lg6': return [1/3, 0, 2/3, 1];
+    case 'lg7': return [0, 0, 2/15, 1/2];
+    case 'lg8': return [0, 1/2, 2/15, 1/2];
+    case 'lg9': return [0, 0, 2/15, 1];
+    case 'lg10': return [2/15, 0, 1/3, 1];
+    case 'lg11': return [2/15+1/3, 0, 1/3, 1];
+    case 'lg12': return [2/15+2/3, 0, 1/5, 1];
+
     /* DEFAULT */
     default: throw new Error ( `Undefined frame named: "${name}"` );
   }

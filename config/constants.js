@@ -2,12 +2,12 @@
 /* KEYS */
 
 const HYPER = ['ctrl', 'alt', 'cmd'];
-const HYPER_SHIFT = [...HYPER, 'shift'];
+const HYPER_SHIFT = ['ctrl', 'cmd'];;
 const DOUBLE_KEY_INTERVAL = 250;
 
 /* OTHERS */
 
-const SHELL_PATH = '/bin/zsh';
+const SHELL_PATH = '/bin/bash';
 const OSASCRIPT_PATH = '/usr/bin/osascript';
 
 const CENTER_WIDTH = 1280;
@@ -43,3 +43,10 @@ const SPACES_ALFRED_PRESELECT = true;
 const SPACES_ALFRED_PRESELECT_DELAY = 0.1;
 const SPACES_UPDATE_CYCLES = 5;
 const SPACES_UPDATE_INTERVAL = 1000;
+
+// Name your monitor based on their resolutions
+// This only works if two different monitors different resolutions
+const MONITORS = {
+    lg: ['6720x1890', '5120x1440'],
+    mac: ['1792x1120', '1728x1117','2056x1329']
+};

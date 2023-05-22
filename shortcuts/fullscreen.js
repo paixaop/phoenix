@@ -1,7 +1,7 @@
 
 /* FULLSCREEN */
 
-setKeyHandler ( 'space', HYPER_SHIFT, () => {
+setKeyHandler ( 'space', HYPER, () => {
 
   const window = Window.focused ();
 
@@ -10,3 +10,4 @@ setKeyHandler ( 'space', HYPER_SHIFT, () => {
   window.setFullScreen ( !window.isFullScreen () );
 
 });
+

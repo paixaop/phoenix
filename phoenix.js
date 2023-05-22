@@ -3,8 +3,11 @@
 
 require ( './config/phoenix.js' );
 require ( './config/constants.js' );
+require ( './config/apps.js' );
 
 require ( './helpers/alert.js' );
+require ( './helpers/log_frame.js' );
+require ( './helpers/key_to_string.js' );
 require ( './helpers/append_file.js' );
 require ( './helpers/center_window.js' );
 require ( './helpers/detect_named_anchor.js' );
@@ -33,11 +36,13 @@ require ( './helpers/set_event_handler.js' );
 require ( './helpers/set_events_handler.js' );
 require ( './helpers/set_frame.js' );
 require ( './helpers/set_key_handler.js' );
+require ( './helpers/set_layout.js' );
 require ( './helpers/set_keys_handler.js' );
 require ( './helpers/shell.js' );
 require ( './helpers/switch_space.js' );
 require ( './helpers/write_file.js' );
 require ( './helpers/write_json.js' );
+require ( './helpers/screen_names.js' );
 
 require ( './shortcuts/blacklist.js' );
 require ( './shortcuts/center.js' );
@@ -47,6 +52,7 @@ require ( './shortcuts/expand.js' );
 require ( './shortcuts/focus.js' );
 require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
+require ( './shortcuts/window_info.js' );
 require ( './shortcuts/grow.js' );
 require ( './shortcuts/halves.js' );
 require ( './shortcuts/pause.js' );
@@ -58,16 +64,21 @@ require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/spotlight.js' );
 require ( './shortcuts/thirds.js' );
+require ( './shortcuts/lg.js' );
+require ( './shortcuts/layouts.js' );
 
 require ( './mouse/snapping.js' );
+require ( './mouse/center.js' );
 
 require ( './magic/chrome.js' );
+require ( './magic/thunderbird.js' );
 require ( './magic/developer_tools.js' );
-require ( './magic/finder.js' );
-require ( './magic/hyper.js' );
-require ( './magic/iterm.js' );
-require ( './magic/terminal.js' );
-require ( './magic/vscode.js' );
+//require ( './magic/finder.js' );
+//require ( './magic/hyper.js' );
+//require ( './magic/iterm.js' );
+//require ( './magic/terminal.js' );
+//require ( './magic/vscode.js' );
+
 
 existsFiles ( SPACES_ALFRED_APPS, hasAlfred => {
 

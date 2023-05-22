@@ -38,11 +38,18 @@ setKeyHandler ( 'i', HYPER_SHIFT, () => {
         const month = monthsNames[date.getMonth ()];
         const year = date.getFullYear ();
 
-        const infoStatus = `${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
+        const infoStatus = `Bat: ${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
         const infoMusic = songName ? `\n•\n${songDisliked ? '♡' : '♥'} - ${_.truncate ( songName.trim (), { length: 40 } )}` : '';
         const info = `${infoStatus}${infoMusic}`;
 
-        alert ( info );
+        const screens = Screen.all();
+        let scr = '\n\nScreens:\n';
+        for(const s in screens) {
+          const frame = screens[s].flippedVisibleFrame();
+          scr += `${frame.width}x${frame.height} : ${frame.x}, ${frame.y}\n`;
+        }
+
+        alert ( info + scr);
 
       });
 
