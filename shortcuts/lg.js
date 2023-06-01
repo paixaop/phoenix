@@ -14,6 +14,7 @@ const lg = [
   ['a', HYPER_SHIFT, ['lg10']],
   ['b', HYPER_SHIFT, ['lg11']],
   ['c', HYPER_SHIFT, ['lg12']],
+  ['d', HYPER_SHIFT, ['lg13']],
 ];
 
 setKeysHandler ( setFrame, lg );

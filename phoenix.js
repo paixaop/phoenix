@@ -56,7 +56,7 @@ require ( './shortcuts/window_info.js' );
 require ( './shortcuts/grow.js' );
 require ( './shortcuts/halves.js' );
 require ( './shortcuts/pause.js' );
-require ( './shortcuts/quit.js' );
+//require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
 require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
@@ -67,11 +67,12 @@ require ( './shortcuts/thirds.js' );
 require ( './shortcuts/lg.js' );
 require ( './shortcuts/layouts.js' );
 
-require ( './mouse/snapping.js' );
+//require ( './mouse/snapping.js' );
 require ( './mouse/center.js' );
 
 require ( './magic/chrome.js' );
 require ( './magic/thunderbird.js' );
+require ( './magic/start_apps.js' );
 require ( './magic/developer_tools.js' );
 //require ( './magic/finder.js' );
 //require ( './magic/hyper.js' );

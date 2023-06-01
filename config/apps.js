@@ -2,18 +2,6 @@
 
 const APPS = {
     // Application name
-    Mail: {
-        // key to focus on application
-        key: ['e', HYPER],            
-        
-        // Layouts
-        layouts: {
-            // Layout Name: ['screen', 'named-position']
-            twoMonitors: ['lg', 'lg1'], 
-            twoMonitorsCode: ['lg', 'lg1'],
-            twoMonitorsMail: ['lg', 'lg12'],
-        },
-    },
     Calendar: {
         key: ['l', HYPER],
         layouts: {
@@ -25,9 +13,9 @@ const APPS = {
     'Microsoft Teams': {
         key: ['m', HYPER],
         layouts: {
-            twoMonitors: ['lg', 'lg3'],
+            twoMonitors: ['lg', 'lg6'],
             twoMonitorsCode: ['lg', 'lg3'],
-            twoMonitorsMail: ['lg', 'lg11']
+            twoMonitorsMail: ['lg', 'lg12']
         },
     },
     Code: {
@@ -74,7 +62,7 @@ const APPS = {
         layouts: {
             twoMonitors: ['lg', 'lg1'],
             twoMonitorsCode: ['lg', 'lg1'],
-            twoMonitorsMail: ['lg', 'lg12']
+            twoMonitorsMail: ['lg', 'lg11']
         },
     },
     Firefox: {
