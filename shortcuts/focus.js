@@ -113,15 +113,12 @@ function callbackiTerm ( isNewWindow ) {
 /* FOCUS */
 
 const focus = [
-  ['`', HYPER, ['Notable']],
-  ['c', HYPER, ['Google Chrome', false, /^(?!Developer Tools)/, /Picture in Picture/, launchChrome]],
-  ['d', HYPER, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, /Picture in Picture/, launchDevTools]],
-  ['v', HYPER, ['Code', false, false, false, launchVSC]],
-  ['t', HYPER, ['Terminal', false, false, false, launchTerminal, callbackTerminal]],
-  // ['t', HYPER, ['Hyper', false, false, false, launchHyper, callbackHyper]],
-  // ['t', HYPER, ['iTerm', false, false, false, launchiTerm, callbackiTerm]],
-  ['f', HYPER, ['Finder', false, false, false, launchFinder]],
-  ['g', HYPER, ['Tower']]
+  ['c', HYPER_1, ['Google Chrome', false, /^(?!Developer Tools)/, /Picture in Picture/, launchChrome]],
+  ['d', HYPER_1, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, /Picture in Picture/, launchDevTools]],
+  ['v', HYPER_1, ['Code', false, false, false, launchVSC]],
+  ['t', HYPER_1, ['Terminal', false, false, false, launchTerminal, callbackTerminal]],
+  ['f', HYPER_1, ['Finder', false, false, false, launchFinder]],
+  ['g', HYPER_1, ['Tower']]
 ];
 
 setKeysHandler ( focusWindow, focus );

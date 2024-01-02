@@ -3,7 +3,7 @@
 const APPS = {
     // Application name
     Calendar: {
-        key: ['l', HYPER],
+        key: ['l', HYPER_1],
         layouts: {
             twoMonitors: ['mac', 'half-2'],    
             twoMonitorsCode: ['mac', 'half-2'],
@@ -11,7 +11,7 @@ const APPS = {
         },
     },
     'Microsoft Teams': {
-        key: ['m', HYPER],
+        key: ['m', HYPER_1],
         layouts: {
             twoMonitors: ['lg', 'lg6'],
             twoMonitorsCode: ['lg', 'lg3'],
@@ -19,7 +19,7 @@ const APPS = {
         },
     },
     Code: {
-        key: ['v', HYPER],
+        key: ['v', HYPER_1],
         layouts: {
             twoMonitors: ['lg', 'lg3'],
             twoMonitorsCode: ['lg', 'right-2/3'],
@@ -27,7 +27,7 @@ const APPS = {
         },
     },
     Terminal: {
-        key: ['t', HYPER],
+        key: ['t', HYPER_1],
         layouts: {
             twoMonitors: ['mac', 'half-1'],
             twoMonitorsCode: ['mac', 'half-1'],
@@ -35,7 +35,7 @@ const APPS = {
         },
     },
     Telegram: {
-        key: ['r', HYPER],
+        key: ['r', HYPER_1],
         layouts: {
             twoMonitors: ['lg', 'lg4'],
             twoMonitorsCode: ['mac', 'top-right'],
@@ -43,7 +43,7 @@ const APPS = {
         },
     },
     Messages: {
-        key: ['i', HYPER],
+        key: ['i', HYPER_1],
         layouts: {
             twoMonitors: ['lg', 'lg5'],
             twoMonitorsCode: ['mac', 'bottom-right'],
@@ -58,7 +58,7 @@ const APPS = {
         },
     },
     Thunderbird: {
-        key: ['e', HYPER],
+        key: ['e', HYPER_1],
         layouts: {
             twoMonitors: ['lg', 'lg1'],
             twoMonitorsCode: ['lg', 'lg1'],

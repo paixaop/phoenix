@@ -1,7 +1,7 @@
 
 /* PAUSE */
 
-setKeyHandler ( 'f8', HYPER, () => {
+setKeyHandler ( 'f8', HYPER_1, () => {
 
   osascript ( 'tell application "System Events" to return name of first process whose frontmost is true', ({ output }) => {
 

@@ -1,7 +1,7 @@
 
 /* INFO */
 
-setKeyHandler ( 'i', HYPER, () => {
+setKeyHandler ( 'i', HYPER_1, () => {
 
   const windows = Space.active ().windows ();
 
@@ -15,7 +15,7 @@ setKeyHandler ( 'i', HYPER, () => {
 
 });
 
-setKeyHandler ( 'i', HYPER_SHIFT, () => {
+setKeyHandler ( 'i', HYPER_2, () => {
 
   shell ( 'pmset -g batt | grep -Eo "\\d+%" | cut -d% -f1', ( id, output ) => {
 

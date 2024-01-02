@@ -2,13 +2,13 @@
 /* SIDES */
 
 const sides = [
-  ['up', HYPER, ['top']],
-  ['right', HYPER, ['right']],
-  ['down', HYPER, ['bottom']],
-  ['left', HYPER, ['left']],
+  ['up', HYPER_1, ['top']],
+  ['right', HYPER_1, ['right']],
+  ['down', HYPER_1, ['bottom']],
+  ['left', HYPER_1, ['left']],
 
-  ['keypad8', HYPER, ['top']],
-  ['keypad2', HYPER, ['bottom']]
+  ['keypad8', HYPER_1, ['top']],
+  ['keypad2', HYPER_1, ['bottom']]
 ];
 
 setKeysHandler ( setFrame, sides );

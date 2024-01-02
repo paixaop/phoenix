@@ -1,4 +1,4 @@
-HYPER = ['ctrl', 'alt', 'cmd'];
+HYPER_1 = ['ctrl', 'alt', 'cmd'];
 
 const monitors = {
     lg: ['6720x1890', '5120x1440'],
@@ -14,9 +14,9 @@ if( monitors[m]) {
 }
 
 const layouts = [
-  ['keypad/', HYPER, 'twoMonitors'],
-  ['keypad=', HYPER, 'twoMonitorsCode'],
-  ['keypad*', HYPER, 'work']
+  ['keypad/', HYPER_1, 'twoMonitors'],
+  ['keypad=', HYPER_1, 'twoMonitorsCode'],
+  ['keypad*', HYPER_1, 'work']
 ];
 
 const [key, modifier, layout] =layouts[0];

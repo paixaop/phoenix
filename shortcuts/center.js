@@ -1,17 +1,25 @@
 
 /* CENTER */
 
-setKeyHandler ( 'x', HYPER, () => {
+setKeyHandler ( 'keypad5', HYPER_1, () => {
 
   const window = Window.focused ();
 
   if ( !window ) return;
-
+  const screen = getWindowScreen(window);
+  const sFrame = screen.flippedVisibleFrame();
+  const frame = window.frame();
+  window.setFrame ({
+    x: frame.x,
+    y: frame.y,
+    width: Math.floor(sFrame.width / 2),
+    height: sFrame.height
+  });
   centerWindow ( window );
 
 });
 
-setKeyHandler ( 'x', HYPER_SHIFT, () => {
+setKeyHandler ( 'keypad5', HYPER_2, () => {
 
   const window = Window.focused ();
 
@@ -30,6 +38,6 @@ setKeyHandler ( 'x', HYPER_SHIFT, () => {
 
 });
 
-setKeyHandler ( 'm', HYPER_SHIFT, () => {
+setKeyHandler ( 'm', HYPER_2, () => {
   centerMouse();
 });

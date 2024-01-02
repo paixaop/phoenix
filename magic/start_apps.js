@@ -1,5 +1,5 @@
 // Start all work applications
-setKeyHandler('s', HYPER, () => {
+setKeyHandler('s', HYPER_1, () => {
     App.launch('Google Chrome');
     App.launch('Terminal');
     App.launch('Telegram');

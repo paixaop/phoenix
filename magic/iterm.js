@@ -1,5 +1,5 @@
 
-/* HYPER */
+/* HYPER_1 */
 
 setEventHandler ( 'windowDidOpen', magiciTermOpen );
 

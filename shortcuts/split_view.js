@@ -1,7 +1,7 @@
 
 /* SPLIT VIEW */
 
-setKeyHandler ( '§', HYPER, () => {
+setKeyHandler ( '§', HYPER_1, () => {
 
   return alert ( 'Split View - Unimplemented' ); //FIXME
 

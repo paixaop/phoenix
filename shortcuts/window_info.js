@@ -1,7 +1,7 @@
 
 /* INFO */
 
-setKeyHandler ( 'o', HYPER_SHIFT, () => {
+setKeyHandler ( 'o', HYPER_2, () => {
 
   const window = Window.focused();
   if(!window) return;

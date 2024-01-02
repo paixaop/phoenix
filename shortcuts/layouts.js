@@ -1,9 +1,9 @@
 // Layouts
 
 const layouts = [
-  ['keypad/', HYPER, 'twoMonitors'],
-  ['keypad=', HYPER, 'twoMonitorsCode'],
-  ['keypad*', HYPER, 'twoMonitorsMail']
+  ['keypad/', HYPER_1, 'twoMonitors'],
+  ['keypad=', HYPER_1, 'twoMonitorsCode'],
+  ['keypad*', HYPER_1, 'twoMonitorsMail']
 ];
 
 setLayout(layouts);
