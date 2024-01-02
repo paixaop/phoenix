@@ -50,3 +50,6 @@ const MONITORS = {
     lg: ['6720x1890', '5120x1440'],
     mac: ['1792x1120', '1728x1117','2056x1329']
 };
+
+// Set the monitor where all new windows will open in
+const MAIN_MONITOR = "lg"

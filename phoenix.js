@@ -74,6 +74,8 @@ require ( './magic/chrome.js' );
 require ( './magic/thunderbird.js' );
 require ( './magic/start_apps.js' );
 require ( './magic/developer_tools.js' );
+require ( './magic/move_to_main_monitor.js');
+
 //require ( './magic/finder.js' );
 //require ( './magic/hyper.js' );
 //require ( './magic/iterm.js' );

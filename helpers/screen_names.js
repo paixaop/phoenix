@@ -30,7 +30,7 @@ function setScreenNames(monitors = MONITORS) {
 
 function getScreenFromName(name) {
     const screensWithNames = setScreenNames();
-    Phoenix.log(`Monitor ${name} mapped to ${screensWithNames[name].identifier()} ${screenToString(screensWithNames[name])}`);
+    //Phoenix.log(`Monitor ${name} mapped to ${screensWithNames[name].identifier()} ${screenToString(screensWithNames[name])}`);
     return screensWithNames[name];
 }
 
@@ -53,3 +53,44 @@ function monitor(screen) {
     }
     return undefined;
 }
+
+function moveWindowToMonitor(window, monitor) {
+    if ( !window ) return;
+    if ( !window.isNormal() || !window.isMain() ) return; 
+
+    if ( !monitor ) return;
+    if ( !(monitor in MONITORS) ) {
+        Phoenix.log(`moveWindowToMonitor: Monitor ${monitor} does not exist in your configuration ${MONITORS}`);
+        return;
+    }
+
+    const name = window.app().name();
+    
+    const targetScreen = getScreenFromName(monitor);
+    const targetScreenFrame = targetScreen.flippedVisibleFrame();
+
+    const currentScreen = window.screen();
+    const currentScreenFrame = currentScreen.flippedVisibleFrame();
+
+    if( currentScreen == targetScreen) {
+        Phoenix.log(`moveWindowToMonitor: Window ${name} already displayed on monitor ${monitor}. Not moving window.`);
+        return;
+    }
+
+    const windowTopLeft = window.topLeft();
+    
+    Phoenix.log(`moveWindowToMonitor: Window TopLeft - x:${windowTopLeft.x}, y:${windowTopLeft.y}`);
+    Phoenix.log(`moveWindowToMonitor: Current Screen: x:${currentScreenFrame.x}, y:${currentScreenFrame.y}, w:${currentScreenFrame.width}, h:${currentScreenFrame.height}`);
+        
+    Phoenix.log(`moveWindowToMonitor: Target Screen - x:${targetScreenFrame.x}, y:${targetScreenFrame.y}, width:${targetScreenFrame.width}, height:${targetScreenFrame.height}`);
+    
+    const newX = targetScreenFrame.x + Math.abs(currentScreenFrame.x - windowTopLeft.x);
+    const newY = targetScreenFrame.y + Math.abs(currentScreenFrame.y - windowTopLeft.y);
+    Phoenix.log(`moveWindowToMonitor: Window ${name} move to ${monitor}: (${newX}, ${newY})`);
+    window.setTopLeft({
+        x: newX,
+        y: newY
+    });
+}
+
+
