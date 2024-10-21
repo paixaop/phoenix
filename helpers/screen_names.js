@@ -2,6 +2,9 @@
 function setScreenNames(monitors = MONITORS) {
     let screensWithNames = {};
     const screens = Screen.all();
+
+    debugMonitors(monitors);
+
     for(const s in screens) {
         let id = screens[s].identifier();
         let r = screens[s].flippedFrame();
@@ -28,7 +31,15 @@ function setScreenNames(monitors = MONITORS) {
     return screensWithNames;
 }
 
+function debugMonitors(monitors = MONITORS) {
+    for(let m in monitors) {
+        Phoenix.log(`Monitor ${m}: ${monitors[m]}`);
+    }
+}
+
 function getScreenFromName(name) {
+    debugMonitors();
+
     const screensWithNames = setScreenNames();
     //Phoenix.log(`Monitor ${name} mapped to ${screensWithNames[name].identifier()} ${screenToString(screensWithNames[name])}`);
     return screensWithNames[name];
