@@ -46,9 +46,8 @@ const SPACES_UPDATE_INTERVAL = 1000;
 
 // Name your monitor based on their resolutions
 // This only works if two different monitors different resolutions
-//lg: ['6720x1890', '5120x1440'],
 const MONITORS = {
-    lg: ['7680x2160'],
+    lg: ['7680x2160', '6720x1890', '5120x1440'],
     mac: ['1792x1120', '1728x1117','2056x1329']
 };
 
