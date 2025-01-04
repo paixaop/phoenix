@@ -4,6 +4,7 @@
 setKeyHandler ( 'keypad5', HYPER_1, () => {
 
   const window = Window.focused ();
+  if( !window || !isUserApp(window) ) return;
 
   if ( !window ) return;
   const screen = getWindowScreen(window);
@@ -22,8 +23,7 @@ setKeyHandler ( 'keypad5', HYPER_1, () => {
 setKeyHandler ( 'keypad5', HYPER_2, () => {
 
   const window = Window.focused ();
-
-  if ( !window ) return;
+  if( !window || !isUserApp(window) ) return;
 
   const frame = window.frame ();
 

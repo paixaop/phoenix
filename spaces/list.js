@@ -147,6 +147,7 @@ function updateSpace ( space, index, screens ) {
 
 function updateWindow ( window ) {
 
+  if( !window || !isUserApp(window) ) return;
   if ( !window.isNormal () ) return;
 
   updateSpaceCycle ( 0 ); // It may take a bit for the window's title to get updated

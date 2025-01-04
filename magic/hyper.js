@@ -7,6 +7,7 @@ setEventHandler ( 'windowDidOpen', magicHyperOpen );
 
 function magicHyperOpen ( window ) {
 
+  if( !window || !isUserApp(window) ) return;
   if ( !window.isNormal () || !window.isMain () ) return;
 
   const name = window.app ().name ();

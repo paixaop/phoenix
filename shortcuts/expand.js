@@ -6,8 +6,8 @@ const expansionCache = {};
 setKeyHandler ( 'space', HYPER_1, () => {
 
   const window = Window.focused ();
+  if( !window || !isUserApp(window) ) return;
 
-  if ( !window ) return;
 
   const screen = getFocusedScreen ( window );
   const sFrame = screen.flippedVisibleFrame ();

@@ -1,9 +1,11 @@
 
 /* GET WINDOW SCREEN */
 
-function getWindowScreen ( win = Window.focused () ) {
+function getWindowScreen ( window = Window.focused () ) {
 
-  if ( win ) return win.screen () || Screen.main ();
+  if( !isUserApp(window) ) return Screen.main ();
+
+  if ( win ) return window.screen () || Screen.main ();
 
   return Screen.main ();
 

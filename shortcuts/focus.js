@@ -68,11 +68,11 @@ function callbackTerminal ( isNewWindow ) {
 
   setTimeout ( () => {
 
-    const focused = Window.focused ();
+    const window = Window.focused ();
 
-    if ( !focused ) return;
+    if( !window || !isUserApp(window) ) return;
 
-    magicTerminalOpen ( focused );
+    //magicTerminalOpen ( window );
 
   }, 600 );
 
@@ -84,11 +84,10 @@ function callbackHyper ( isNewWindow ) {
 
   setTimeout ( () => {
 
-    const focused = Window.focused ();
+    const window = Window.focused ();
+    if( !window || !isUserApp(window) ) return;
 
-    if ( !focused ) return;
-
-    magicHyperOpen ( focused );
+    magicHyperOpen ( window );
 
   }, 1200 );
 
@@ -100,11 +99,11 @@ function callbackiTerm ( isNewWindow ) {
 
   setTimeout ( () => {
 
-    const focused = Window.focused ();
+    const window = Window.focused ();
 
-    if ( !focused ) return;
+    if( !window || !isUserApp(window) ) return;
 
-    magiciTermOpen ( focused );
+    //magiciTermOpen ( window );
 
   }, 600 );
 

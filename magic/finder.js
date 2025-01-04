@@ -6,6 +6,7 @@ setEventHandler ( 'windowDidOpen', magicFinderOpen );
 /* HELPERS */
 
 function magicFinderOpen ( window ) {
+  if( !window || !isUserApp(window) ) return;
 
   if ( !window.isNormal () || !window.isMain () ) return;
 

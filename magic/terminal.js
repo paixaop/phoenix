@@ -1,11 +1,12 @@
 
 /* TERMINAL */
 
-setEventHandler ( 'windowDidOpen', magicTerminalOpen );
+//setEventHandler ( 'windowDidOpen', magicTerminalOpen );
 
 /* HANDLER */
 
 function magicTerminalOpen ( window ) {
+  if( !window || !isUserApp(window) ) return;
 
   if ( !window.isNormal () || !window.isMain () ) return;
 

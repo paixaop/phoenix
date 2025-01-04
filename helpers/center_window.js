@@ -1,7 +1,10 @@
 
 /* CENTER WINDOW */
 
+
 function centerWindow ( window ) {
+
+  if( !isUserApp(window) ) return;
 
   const screen = getWindowScreen ( window );
   const sFrame = screen.flippedFrame ();

@@ -28,6 +28,8 @@ function activate_layout(layout, apps = APPS) {
                 Phoenix.log(`Layout: App ${a} moved to monitor ${monitor} at ${namedFrame}`);
                 const windows = app.windows();
                 for(const window of windows) {
+                    
+                    if( !window || !isUserApp(window) ) continue;
                     window.unminimize();
                     Phoenix.log(`App: ${a} window: ${window.title()}`);
                     const screen = getScreenFromName(monitor).flippedVisibleFrame();

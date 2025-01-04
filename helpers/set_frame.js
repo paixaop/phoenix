@@ -2,6 +2,7 @@
 /* SET FRAME */
 
 function setFrame ( x, y, width, height, window = Window.focused () ) {
+  if( !window || !isUserApp(window) ) return false;
 
   if ( _.isString ( x ) ) {
 

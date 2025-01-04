@@ -10,7 +10,7 @@ setEventHandler ( 'mouseDidLeftDrag', () => {
 
   const window = Window.focused ();
 
-  if ( !window ) return;
+  if( !window || !isUserApp(window) ) return;
 
   isSnapping = true;
   snappingFrame = window.frame ();
@@ -21,7 +21,7 @@ setEventHandler ( 'mouseDidLeftDrag', () => {
 
     const window = Window.focused ();
 
-    if ( !window ) return;
+    if( !window || !isUserApp(window) ) return;
 
     const frame = window.frame ();
 

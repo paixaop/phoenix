@@ -6,6 +6,7 @@ setEventHandler ( 'windowDidOpen', magicChromeOpen );
 /* HELPERS */
 
 function magicChromeOpen ( window ) {
+  if( !window || !isUserApp(window) ) return;
 
   if ( !window.isNormal () || !window.isMain () ) return;
 

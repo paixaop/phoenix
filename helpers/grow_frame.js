@@ -4,6 +4,7 @@
 function growFrame ( x, y, width, height, window = Window.focused () ) { //FIXME: Multi-monitor support
 
   if ( !window ) return false;
+  if( !isUserApp(window) ) return false;
 
   const screen = getFocusedScreen ( window );
   const sFrame = screen.flippedFrame ();
@@ -34,7 +35,8 @@ function growFrame ( x, y, width, height, window = Window.focused () ) { //FIXME
 }
 
 function growOrShrinkFrame ( deltasGrow, deltasShrink, window = Window.focused () ) {
-
+  
+  if( !isUserApp(window) ) return false;
   const grown = growFrame ( ...deltasGrow, window );
 
   if ( grown ) return 1;

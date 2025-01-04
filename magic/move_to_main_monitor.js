@@ -3,7 +3,8 @@ setEventHandler ( 'windowDidOpen', moveWindowToMainScreen );
 
 /* HELPERS */
 function moveWindowToMainScreen ( window ) {
-    moveWindowToMonitor(window, MAIN_MONITOR);
+  if( !window || !isUserApp(window) ) return;
+  moveWindowToMonitor(window, MAIN_MONITOR);
 }
 
 /*

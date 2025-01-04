@@ -9,6 +9,7 @@ setEventHandler ( 'windowDidClose', magicDeveloperToolsClose );
 /* HELPERS */
 
 function isWindowDeveloperTools ( window, checkHash = false ) {
+  if( !window || !isUserApp(window) ) return false;
 
   if ( checkHash ) {
 
@@ -33,6 +34,7 @@ function isWindowDeveloperTools ( window, checkHash = false ) {
 }
 
 function magicDeveloperToolsOpen ( window ) {
+  if( !window || !isUserApp(window) ) return;
 
   if ( !isWindowDeveloperTools ( window ) ) return;
 
@@ -45,6 +47,7 @@ function magicDeveloperToolsOpen ( window ) {
 }
 
 function magicDeveloperToolsClose ( window ) {
+  if( !window || !isUserApp(window) ) return;
 
   if ( !isWindowDeveloperTools ( window, true ) ) return;
 
@@ -57,7 +60,7 @@ function magicDeveloperToolsClose ( window ) {
 }
 
 function growVSCHeight ( growth ) {
-
+  
   const vscode = Space.active ().windows ().find ( window => /Code/.test ( window.app ().name () ) );
 
   if ( !vscode ) return;

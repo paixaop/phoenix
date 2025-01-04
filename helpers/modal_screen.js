@@ -3,6 +3,8 @@
 
 function modalScreen ( options, screen = getFocusedScreen () ) {
 
+  if (!screen) return;
+
   const frame = screen.frame ();
 
   options.origin = function ( mFrame ) {

@@ -6,7 +6,7 @@ setKeyHandler ( 'i', HYPER_1, () => {
   const windows = Space.active ().windows ();
 
   windows.forEach ( window => {
-
+    if( !window || !isUserApp(window) ) return;
     if ( !window.isVisible () || !window.title () ) return;
 
     modalWindow ( {}, window );

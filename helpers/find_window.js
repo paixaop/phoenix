@@ -8,6 +8,9 @@ function findWindow ( windows = Window.all (), name = false, isNameOptional = fa
   for ( let i = 0, l = windows.length; i < l; i++ ) {
 
     const window = windows[i];
+
+    if( !isUserApp(window) ) return null;
+
     const windowTitle = window.title ();
 
     if ( !windowTitle ) continue; // Not a normal window

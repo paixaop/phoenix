@@ -4,7 +4,7 @@
 setKeyHandler ( 'o', HYPER_2, () => {
 
   const window = Window.focused();
-  if(!window) return;
+  if( !window || !isUserApp(window) ) return;
 
   const app = window.app().name();
   const title = window.title();

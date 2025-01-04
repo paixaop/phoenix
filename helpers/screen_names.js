@@ -66,7 +66,10 @@ function monitor(screen) {
 }
 
 function moveWindowToMonitor(window, monitor) {
-    if ( !window ) return;
+    if( !window || !isUserApp(window) ) return false;
+
+    if( !isUserApp(window) ) return;
+
     if ( !window.isNormal() || !window.isMain() ) return; 
 
     if ( !monitor ) return;

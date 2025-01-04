@@ -5,6 +5,7 @@ require ( './config/phoenix.js' );
 require ( './config/constants.js' );
 require ( './config/apps.js' );
 
+require ('./helpers/is-user-app.js');
 require ( './helpers/alert.js' );
 require ( './helpers/log_frame.js' );
 require ( './helpers/key_to_string.js' );
@@ -49,7 +50,7 @@ require ( './shortcuts/center.js' );
 require ( './shortcuts/corners.js' );
 require ( './shortcuts/desktop_icons.js' );
 require ( './shortcuts/expand.js' );
-require ( './shortcuts/focus.js' );
+//require ( './shortcuts/focus.js' );
 require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
 require ( './shortcuts/window_info.js' );
@@ -66,6 +67,7 @@ require ( './shortcuts/spotlight.js' );
 require ( './shortcuts/thirds.js' );
 require ( './shortcuts/lg.js' );
 require ( './shortcuts/layouts.js' );
+require ( './shortcuts/busylight.js' );
 
 //require ( './mouse/snapping.js' );
 require ( './mouse/center.js' );

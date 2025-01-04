@@ -6,6 +6,8 @@ setEventHandler ('windowDidOpen', magicThunderbirdOpen);
 /* HELPERS */
 
 function magicThunderbirdOpen ( window ) {
+  if( !window || !isUserApp(window) ) return;
+
   const appName = window.app().name();
   const windowTitle = window.title();
 
@@ -17,6 +19,7 @@ function magicThunderbirdOpen ( window ) {
   Phoenix.log(`Center Thunderbird writing window`);
 
   for(const w of window.app().windows()) {
+    if( !w || !isUserApp(w) ) return false;
     Phoenix.log(`Thunderbird ${w.title}`);
     if ( !/Write/.test(w.title()) ) {
       const sFrame = w.screen().flippedVisibleFrame();

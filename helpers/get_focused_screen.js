@@ -1,8 +1,9 @@
 
 /* GET FOCUSED SCREEN */
 
-function getFocusedScreen ( win = Window.focused () ) {
+function getFocusedScreen ( window = Window.focused () ) {
 
-  return getWindowScreen ( win );
+  if( !isUserApp(window) ) return null;  
+  return getWindowScreen ( window );
 
 }
