@@ -26,6 +26,14 @@ const APPS = {
             twoMonitorsMail: ['lg', 'lg11']
         },
     },
+    Cursor: {
+        key: ['c', HYPER_1],
+        layouts: {
+            twoMonitors: ['lg', 'lg3'],
+            twoMonitorsCode: ['lg', 'right-2/3'],
+            twoMonitorsMail: ['lg', 'lg11']
+        },
+    },
     Terminal: {
         key: ['t', HYPER_1],
         layouts: {
