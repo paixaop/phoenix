@@ -30,8 +30,7 @@ function isSystemPath(pid) {
             if(!task || !task.output ) return false;
 
             const path = task.output.trim();
-            const systemPaths = ["/System/", "/usr/"];
-            return systemPaths.some((systemPath) => path.startsWith(systemPath));
+            return path.startsWith('/System') || path.startsWith('/usr');
         });
     } catch (error) {
         Phoenix.log(`Error checking system path: ${error}`);
@@ -54,6 +53,7 @@ function isUserApp(window) {
         const appName = app.name();
         const bundleId = app.bundleIdentifier();
         const pid = app.processIdentifier();
+        //Phoenix.log(`Checking if ${appName} (PID: ${pid}) is a user app`);
 
         // Bundle blacklist
         const bundleBlackList = [
@@ -111,11 +111,13 @@ function isUserApp(window) {
             return false;
         }
 
-        if(!isSystemPath(pid)) {
+        if(isSystemPath(pid)) {
+            Phoenix.log(`Skipping system path: ${appName} (PID: ${pid})`);
             return false;
         }
 
         // If all checks pass, assume it is a user-facing app
+        Phoenix.log(`${appName} (PID: ${pid}) is a user app`);
         return true;
     } catch (error) {
         Phoenix.log(`Error filtering window: ${error}`);
